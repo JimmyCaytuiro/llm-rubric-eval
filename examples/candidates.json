@@ -1,0 +1,16 @@
+{
+  "task": "Write a Python function to parse Modbus RTU frames with CRC validation",
+  "rubric": {
+    "technical_accuracy": 0.30,
+    "completeness": 0.20,
+    "code_quality": 0.20,
+    "clarity": 0.10,
+    "safety_compliance": 0.10,
+    "conciseness": 0.10
+  },
+  "candidates": [
+    {"model": "model-alpha", "scores": {"technical_accuracy": 9, "completeness": 8, "code_quality": 8, "clarity": 9, "safety_compliance": 10, "conciseness": 7}, "notes": "CRC16 correct, handles broadcast address, missing timeout handling"},
+    {"model": "model-beta", "scores": {"technical_accuracy": 6, "completeness": 9, "code_quality": 7, "clarity": 8, "safety_compliance": 10, "conciseness": 5}, "notes": "CRC byte order swapped — fails on real frames"},
+    {"model": "model-gamma", "scores": {"technical_accuracy": 8, "completeness": 6, "code_quality": 9, "clarity": 7, "safety_compliance": 10, "conciseness": 9}, "notes": "Clean but omits exception frames (function code | 0x80)"}
+  ]
+}
